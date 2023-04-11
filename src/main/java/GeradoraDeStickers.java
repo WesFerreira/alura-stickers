@@ -5,19 +5,22 @@ import java.io.File;
 
 public class GeradoraDeStickers {
 
-    public void cria() throws Exception {
+    public void create() throws Exception {
 
-        // Leitura da imagem
-        BufferedImage imagemOriginal = ImageIO.read(new File("entrada/filmes.png"));
+        // Reading the image
+        BufferedImage originalImage = ImageIO.read(new File("entrada/filmes.png"));
 
-        // Cria nova imagem em memória com transparência e com tamanho novo
+        // Create a new image in memory with the new size and translucent
+        int width = originalImage.getWidth();
+        int height = originalImage.getHeight();
+        int newHeight = height + 200;
+        BufferedImage newImage = new BufferedImage(width, newHeight, BufferedImage.TRANSLUCENT);
 
+        // Copy the origin image for a new image (in memory)
 
-        // Copia a imagem original para a nova imagem (em memória)
+        // Write a sentence in the new image
 
-        // Escrever uma frase na nova imagem
-
-        // Escrever a nova imagem em um arquivo
+        // Write the new image in a file
 
     }
 
